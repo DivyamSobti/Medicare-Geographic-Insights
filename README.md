@@ -20,7 +20,7 @@ Architecture
 
 The architecture of this project is presented as follows:
 
-architecture_2
+![architecture_2](https://github.com/DivyamSobti/Medicare-Geographic-Insights/blob/main/Visualization/architecture_2.png))
 
 - Data is sourced from PostgreSQL and ingested into `raw zone` of Data Lake hosted on S3.
 - Raw data is cleansed and standardized before moving to `cleansed zone`.
@@ -40,7 +40,23 @@ architecture_2
 Some dashboards create from the data from data read storage
 - Drug report
 
+![drug_report]((https://github.com/DivyamSobti/Medicare-Geographic-Insights/blob/main/Visualization/PieChart.png))
 
-Some dashboards create from the data from data read storage
+- Prescriber report
 
-    Drug report
+![prescriber_report](https://github.com/DivyamSobti/Medicare-Geographic-Insights/blob/main/Visualization/Screenshot%20(2).png)
+
+## **Achievement in learning**
+### Apache Spark
+- Components of Spark and how Spark works.
+- How to adjust resource (RAM, CPU, instances,...) for optimizing Spark performance and costs.
+- Tuning Spark application by using partition
+- Use Spark to implement a full data pipeline.
+- Fundamental of how to write Spark correct.
+- Manage Jar files for JDBC connection
+### Project set up
+- Implement logging and log file to track the Spark application
+- Test project on local mode before run on cluster.
+### AWS
+- Set up EMR for Spark
+- Track the resource utilization in EMR
