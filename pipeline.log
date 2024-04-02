@@ -1,0 +1,50 @@
+
+Healthcare Project - "22-Nov-23 18:11:25" - __main__ - INFO - Reading state raw data into dataframe...
+Healthcare Project - "22-Nov-23 18:11:25" - __main__ - INFO - Reading data from /Users/divyamsobti/Downloads/MUP_DPR_RY23_P04_V10_DY21_NPI.csv/state/year=2023/month=11/day=22
+Healthcare Project - "22-Nov-23 18:11:25" - __main__ - ERROR - Error when cleansing state data. Please check the Stack Trace. [PATH_NOT_FOUND] Path does not exist: file:/Users/divyamsobti/Downloads/MUP_DPR_RY23_P04_V10_DY21_NPI.csv/state/year=2023/month=11/day=22.
+Traceback (most recent call last):
+  File "/var/folders/p1/6w1txg1s1rj5tv4tp55vh74r0000gn/T/ipykernel_85008/65381294.py", line 49, in clean_state_data
+    state_df = self._read_parquet(f"state/{self.data_date}")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/folders/p1/6w1txg1s1rj5tv4tp55vh74r0000gn/T/ipykernel_85008/65381294.py", line 34, in _read_parquet
+    return self.spark.read.parquet(path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/pyspark/sql/readwriter.py", line 544, in parquet
+    return self._df(self._jreader.parquet(_to_seq(self._spark._sc, paths)))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/py4j/java_gateway.py", line 1322, in __call__
+    return_value = get_return_value(
+                   ^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/pyspark/errors/exceptions/captured.py", line 185, in deco
+    raise converted from None
+pyspark.errors.exceptions.captured.AnalysisException: [PATH_NOT_FOUND] Path does not exist: file:/Users/divyamsobti/Downloads/MUP_DPR_RY23_P04_V10_DY21_NPI.csv/state/year=2023/month=11/day=22.
+Healthcare Project - "24-Nov-23 06:48:49" - root - INFO - Exception while sending command.
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/py4j/clientserver.py", line 503, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/py4j/clientserver.py", line 506, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending
+Healthcare Project - "24-Nov-23 06:48:49" - root - INFO - Exception while sending command.
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/py4j/clientserver.py", line 503, in send_command
+    self.socket.sendall(command.encode("utf-8"))
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/py4j/clientserver.py", line 506, in send_command
+    raise Py4JNetworkError(
+py4j.protocol.Py4JNetworkError: Error while sending
